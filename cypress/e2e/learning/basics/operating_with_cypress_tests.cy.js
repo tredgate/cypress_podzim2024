@@ -12,9 +12,11 @@ describe("Operating with Cypress Tests", () => {
   });
 });
 /*
- Vytvořte novou složku cypress/e2e/exercises
-Vytvořte v ní nový test soubor “lost_password_tests.cy.js”
-Vytvořte describe “Lost passwords tests”
-Vytvořte it “Lost password test”
-Otevřete pmtool, klikněte forgotten password, vyplňte nejdříve e-mail: test@tredgate.cz, poté username: test a potvrďte.
- */
+Pokud jste nepushnuli do Github minulou hodinu, pushněte
+Přepněte se do main branch, pokud v ní nejste.
+Vytvořte novou branch: page_objects_learning
+Vytvořte složky:
+v cypress (NE v e2e) složku: page-objects, v nové složce page-objects: pmtool a learning
+v cypress/e2e: pmtool
+v cypress/e2e/learning: page-objects-tests
+*/
