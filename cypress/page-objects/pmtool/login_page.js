@@ -7,6 +7,7 @@ export class LoginPage {
     this.usernameInput = "#username"; // ! zde nesmí být cy.get!!
     this.passwordInput = "#password";
     this.loginButton = ".btn";
+    this.pageHeader = "h3.form-title";
   }
 
   openPmtool() {
@@ -34,5 +35,10 @@ export class LoginPage {
     this.typePassword(password);
     this.clickLogin();
     return new DashboardPage();
+  }
+
+  pageHeaderHaveText(headerText) {
+    cy.get(this.pageHeader).should("have.text", headerText);
+    return this;
   }
 }
