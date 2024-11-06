@@ -1,0 +1,2 @@
+Ahoj 
+složka: cypress/fixtures
