@@ -2,11 +2,14 @@ import { DashboardPage } from "../../page-objects/pmtool/dashboard_page.js";
 import { LoginPage } from "../../page-objects/pmtool/login_page.js";
 
 describe("Fluent Login Tests", () => {
+  const username = Cypress.env("pmtool_username");
+  const password = Cypress.env("pmtool_password");
+
   beforeEach(() => {
     new LoginPage()
       .openPmtool()
-      .typeUsername("cypress_zima_2024")
-      .typePassword("Zima2024Cypress")
+      .typeUsername(username)
+      .typePassword(password)
       .clickLogin();
   });
 
@@ -21,8 +24,8 @@ describe("Fluent Login Tests", () => {
     new DashboardPage()
       .clickProfile()
       .clickLogout()
-      .typeUsername("cypress_zima_2024")
-      .typePassword("Zima2024Cypress")
+      .typeUsername(username)
+      .typePassword(password)
       .clickLogin();
   });
 });
