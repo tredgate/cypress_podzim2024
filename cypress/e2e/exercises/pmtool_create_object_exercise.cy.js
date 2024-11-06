@@ -11,7 +11,7 @@ describe("Exercise: Create project", () => {
     new LoginPage()
       .openPmtool()
       .login(username, password)
-      .clickProjects()
+      .openProjects()
       .clickAddNewProject()
       .typeName(projectName)
       .clickSave();
