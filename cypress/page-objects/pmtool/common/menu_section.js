@@ -1,5 +1,9 @@
-export class MenuSection {
-  constructor() {
+import { BasePage } from "./base_page.js";
+
+export class MenuSection extends BasePage {
+  constructor(path) {
+    // * MenuSection nově přijíma path, kterou dále posílá do BasePage, který ji zpracovává.
+    super(path);
     this.projectsMenuAnchor = "#Projects";
     this.dashboardMenuAnchor = "#dashboard a";
     this.usersMenuAnchor = "#Users .menu-itemsitems1";
