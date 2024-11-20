@@ -1,9 +1,13 @@
 import { LoginPage } from "../../page-objects/pmtool/login_page.js";
 
-describe("Login Page Atomic Tests", () => {
+describe("Login Page Atomic Tests", { testIsolation: false }, () => {
   const loginPage = new LoginPage();
 
-  beforeEach(() => {
+  before(() => {
+    cy.clearAllCookies();
+    cy.clearAllLocalStorage();
+    cy.clearAllSessionStorage();
+
     new LoginPage().openPmtool();
   });
 
@@ -23,6 +27,7 @@ describe("Login Page Atomic Tests", () => {
     });
 
     it("Empty Validation Message", () => {
+      loginPage.usernameInput.clear();
       loginPage.clickLogin();
       loginPage.usernameErrorLabel.haveText("This field is required!");
     });
@@ -57,12 +62,3 @@ describe("Login Page Atomic Tests", () => {
     });
   });
 });
-
-/*
-Připravte selektory a testy (do každý element bude mít svůj kontext) pro:
-heslo (viditelnost, placeholder, chybová zpráva),
-logo (viditelnost),  
-nadpis (viditelnost, text), 
-
-
-*/
