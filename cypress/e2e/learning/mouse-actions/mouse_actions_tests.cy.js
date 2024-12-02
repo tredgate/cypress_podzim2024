@@ -1,5 +1,5 @@
 //mouse_actions_tests.cy.js
-describe("Mouse Actions Tests", () => {
+describe("Mouse Actions Tests", { tags: "@smoke" }, () => {
   it("Scroll Into View", () => {
     cy.visit("https://tredgate.com/webtrain");
     cy.get("h1").scrollIntoView().should("be.visible");

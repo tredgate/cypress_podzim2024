@@ -3,7 +3,7 @@ describe("Forms Tests", () => {
   beforeEach(() => {
     cy.visit("https://tredgate.com/webtrain/registration.html");
   });
-  it("Check radio button", () => {
+  it("Check radio button", { tags: "@smoke" }, () => {
     cy.get("#basic").check();
     cy.get("#basic").should("be.checked");
     cy.get('input[name="subscription"]').check("premium"); // více přepoužitelné, například v pageobjectech, protože z testu mi může přijít jen value
