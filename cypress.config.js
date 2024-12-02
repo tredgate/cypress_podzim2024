@@ -8,6 +8,8 @@ module.exports = defineConfig({
     automation_test_store_url: "https://automationteststore.com/",
     tegb_url: "http://localhost:3001/",
     tegb_api_url: "http://localhost:3000/",
+    grepFilterSpecs: true,
+    grepOmitFiltered: true,
   },
   e2e: {
     setupNodeEvents(on, config) {
