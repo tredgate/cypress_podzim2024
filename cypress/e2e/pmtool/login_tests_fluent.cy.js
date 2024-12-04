@@ -13,7 +13,7 @@ describe("Fluent Login Tests", () => {
       .clickLogin();
   });
 
-  it("Login to Pmtool and logout using Fluent API", () => {
+  it("Login to Pmtool and logout using Fluent API", { tags: "@e2e" }, () => {
     new DashboardPage()
       .clickProfile()
       .clickLogout()
